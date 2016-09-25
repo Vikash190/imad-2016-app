@@ -18,6 +18,24 @@ var articleOne={
             </p>`
     
 };
+var articleTwo={
+    title:" article two| vikash",
+    heading:"Article two",
+    date:"sep 26 2016",
+    content:`<p>
+                content of the page content of the page content of the page content of the page content of the page content of the page content of the page content of the page content of the page content of the page content of the page content of the page content of the page content of the page content of the page content of the page 
+            </p>`
+    
+};
+var articleThree={
+    title:" article three| vikash",
+    heading:"Article three",
+    date:"sep 27 2016",
+    content:`<p>
+                content of the page Student ID: 836726997 Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997 lflgdlnglfdlgdfglndfgnbdgfdnkglfdglfdgfdgldkngg
+            </p>`
+    
+};
 
 function createTemplate(data){
     
@@ -63,11 +81,11 @@ app.get('/article-one', function(req, res){
 });
  
 app.get('/article-two', function(req, res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
+   res.send(createTemplate(articleTwo));
  });
 
 app.get('/article-three', function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
+   res.send(createTemplate(articleThree));
 });
 
 app.get('/ui/style.css', function (req, res) {
