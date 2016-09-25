@@ -1,7 +1,10 @@
-body {
-    font-family: sans;
-    background-color: red;
-    margin-top: 75px;
+h3{
+    font-family:sans-serif;
+    color:blue;
+}
+p{
+    font-family:aerial;
+    color:red;
 }
 
 .center {
