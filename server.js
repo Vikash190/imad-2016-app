@@ -5,8 +5,18 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-
-var articleOne={
+var articles={
+    articleOne:{
+    title:" article one| vikash",
+    heading:"Article one",
+    date:"sep 25 2016",
+    content:` <p>
+                content of the page Student ID: 836726997 Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997 
+            </p>
+              <p>
+                content of the page Student ID: 836726997 Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997 
+            </p>`},
+    articeTwo:{ 
     title:" article one| vikash",
     heading:"Article one",
     date:"sep 25 2016",
@@ -17,25 +27,20 @@ var articleOne={
                 content of the page Student ID: 836726997 Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997 
             </p>`
     
+},
+
+    articleThree:{ 
+    title:" article one| vikash",
+    heading:"Article one",
+    date:"sep 25 2016",
+    content:` <p>
+                content of the page Student ID: 836726997 Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997 
+            </p>
+              <p>
+                content of the page Student ID: 836726997 Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997 
+            </p>`}
 };
-var articleTwo={
-    title:" article two| vikash",
-    heading:"Article two",
-    date:"sep 26 2016",
-    content:`<p>
-                content of the page content of the page content of the page content of the page content of the page content of the page content of the page content of the page content of the page content of the page content of the page content of the page content of the page content of the page content of the page content of the page 
-            </p>`
-    
-};
-var articleThree={
-    title:" article three| vikash",
-    heading:"Article three",
-    date:"sep 27 2016",
-    content:`<p>
-                content of the page Student ID: 836726997 Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997 lflgdlnglfdlgdfglndfgnbdgfdnkglfdglfdgfdgldkngg
-            </p>`
-    
-};
+
 
 function createTemplate(data){
     
