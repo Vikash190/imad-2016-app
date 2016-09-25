@@ -1,5 +1,5 @@
-var express = require('express');
-var morgan = require('morgan');
+var express = require('express'); //library to establish connection
+var morgan = require('morgan'); //library help output logs 
 var path = require('path');
 
 var app = express();
