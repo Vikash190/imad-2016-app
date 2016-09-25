@@ -17,9 +17,9 @@ var articles={
                 content of the page Student ID: 836726997 Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997 
             </p>`},
     "article-two":{ 
-    title:" article one| vikash",
-    heading:"Article one",
-    date:"sep 25 2016",
+    title:" article two| vikash",
+    heading:"Article two",
+    date:"sep 26 2016",
     content:` <p>
                 content of the page Student ID: 836726997 Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997 
             </p>
@@ -30,9 +30,9 @@ var articles={
 },
 
     "article-three":{ 
-    title:" article one| vikash",
-    heading:"Article one",
-    date:"sep 25 2016",
+    title:" article three| vikash",
+    heading:"Article three",
+    date:"sep 27 2016",
     content:` <p>
                 content of the page Student ID: 836726997 Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997 
             </p>
