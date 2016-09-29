@@ -31,7 +31,7 @@ submit.onclick=function(){
     var nameList="";
     
     for(var i=0;names.length;i++){
-        list+="<li>"+names[i]+"</li>";
+        nameList+="<li>"+names[i]+"</li>";
     }
     var ul=document.getElementById('list');
     ul.innerHTML=namelist;
