@@ -13,41 +13,7 @@ var config={
 var app = express();
 app.use(morgan('combined'));
 
-var articles={
-    "article-one":{
-    title:" article one| vikash",
-    heading:"Article one",
-    date:"sep 25 2016",
-    content:` <p>
-                content of the page Student ID: 836726997 Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997 
-            </p>
-              <p>
-                content of the page Student ID: 836726997 Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997 
-            </p>`},
-    "article-two":{ 
-    title:" article two| vikash",
-    heading:"Article two",
-    date:"sep 26 2016",
-    content:` <p>
-                content of the page Student ID: 836726997 Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997 
-            </p>
-              <p>
-                content of the page Student ID: 836726997 Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997 
-            </p>`
-    
-},
 
-    "article-three":{ 
-    title:" article three| vikash",
-    heading:"Article three",
-    date:"sep 27 2016",
-    content:` <p>
-                content of the page Student ID: 836726997 Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997 
-            </p>
-              <p>
-                content of the page Student ID: 836726997 Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997Student ID: 836726997 
-            </p>`}
-};
 
 
 function createTemplate(data){
@@ -118,8 +84,8 @@ app.get('/submit-name', function(req,res){//url:/submit-name?name-xxxx
 });
 app.get('/articles/:articleName', function(req, res){
     
-    
-    pool.query("SELECT * FROM article WHERE title='" + req.params.articleName + "'", function(err,result){
+    //SELECT * FROM article WHERE title='\';Delete where a=\'a
+    pool.query("SELECT * FROM article WHERE title=$1" , [req.params.articleName] , function(err,result){
         if(err){
             res.status(500).send(err.toString());
         }else{
