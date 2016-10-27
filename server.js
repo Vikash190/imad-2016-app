@@ -7,14 +7,32 @@ var app=express();
 
 app.use(morgan('combined'));
 
-var articleOne={
-  title:"article-one",
-  heading:"article-one",
-  date: "25 sep 2016",
-  content:` <p>this is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first article</p>
-`
+var articles={ 
+    'article-one':{
+      title:"article-one",
+      heading:"article-one",
+      date: "25 sep 2016",
+      content:` <p>this is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first article</p>
+    `
+    },
+    'article-two':{
+        title:"article-two",
+      heading:"article-two",
+      date: "26 sep 2016",
+      content:` <p>this is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first article</p>
+     <p>this is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first article</p><p>this is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first article</p>
+    `
+    },
+    'article-three':{
+         title:"article-three",
+      heading:"article-three",
+      date: "27 sep 2016",
+      content:` <p>this is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first article</p>
+     <p>this is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first article</p><p>this is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first article</p>
+  <p>this is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first article</p><p>this is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first article</p><p>this is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first article</p>
+    `
+    }
 };
-
 
 function createTemplate(data){
     var title=data.title;
@@ -51,21 +69,13 @@ app.get('/', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
  
- app.get('/article-one', function(req, res){
-    res.send(createTemplate(articleOne));
+ app.get('/:articleName', function(req, res){
+     
+     var articleName= req.params.articleName;
+    res.send(createTemplate(articles[articleName]));
 
 });
 
-
-app.get('/article-two', function(req, res){
-   res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
-
-
-app.get('/article-three', function(req, res){
- res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));   
-});
- 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
