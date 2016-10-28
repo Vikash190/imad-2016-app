@@ -1,13 +1,18 @@
-console.log("loaded");
+var button= document.getElementById('counter');
 
-
-var img= document.getElementById("madi");
-var marginLeft=0;
-function moveLeft(){
-    marginLeft=marginLeft-1;
-    img.style.marginLeft=marginLeft+"px";
-}
-img.onclick=function(){
-    var interval=setInterval(moveLeft,50);
+button.onclick=function(){
     
+    var request= new XMLHttpRequest();
+    
+    request.onreadystatechange=function(){
+        if(request.readyState===XMLHttpRequest.DONE && request.status ===200){
+            var counter=request.responseText;
+            var span=document.getElementById('count');
+            span.innerHTML=counter.toString();
+        }
+    };
+    
+    
+    request.open('GET', "http://vikash190.imad.hasura-app.io/counter", true);
+    request.send(null);
 };
