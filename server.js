@@ -15,32 +15,7 @@ var config = {
     password : process.env.DB_PASSWORD
 };
 
-var articles={ 
-    'article-one':{
-      title:"article-one",
-      heading:"article-one",
-      date: "25 sep 2016",
-      content:` <p>this is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first article</p>
-    `
-    },
-    'article-two':{
-        title:"article-two",
-      heading:"article-two",
-      date: "26 sep 2016",
-      content:` <p>this is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first article</p>
-     <p>this is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first article</p><p>this is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first article</p>
-    `
-    },
-    'article-three':{
-         title:"article-three",
-      heading:"article-three",
-      date: "27 sep 2016",
-      content:` <p>this is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first article</p>
-     <p>this is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first article</p><p>this is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first article</p>
-  <p>this is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first article</p><p>this is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first article</p><p>this is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first articlethis is my first article</p>
-    `
-    }
-};
+
 
 var pool = new Pool(config);
 app.get('/test-db', function(req,res){
